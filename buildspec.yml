@@ -2,7 +2,7 @@ version: 0.2
 
 env:
     variables:
-        MY_AWS_REGION: "us-east-1"
+        MY_AWS_REGION: "ap-south-1"
 
 
 phases: 
@@ -15,9 +15,9 @@ phases:
             - printenv
             - echo "Start the installation process"
             - echo "Installation Process Completed"
-            - echo "Hey, welcome to AWS $name"
+            - echo "hey welcome to AWS $name"
             - echo "My code build id is $CODEBUILD_BUILD_ID"
-            - echo "My Golang version is $GOLANG_21_VERSION"
+            - echo "My Golang version is $GOLANG_12_VERSIONGOLANG_12_VERSION"
     pre_build:
         commands: 
             - echo "This is the start of Pre-Build phase"
@@ -33,9 +33,8 @@ phases:
     post_build:
         commands:
             - echo "We are currently on post_build phase"
-            - echo "post_build phase activity is completed. Moving next to Artifacts"
+            - echo "post_build phase activity is completed. Moving to Artifacts Phase"
 
 artifacts:
     files:
     - '**/*'
-    
